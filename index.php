@@ -66,4 +66,5 @@ $date = date('Y-m-d');
         <title><?php echo $title;?></title>
         <?php echo $h1;?>
     </head>
+    <footer><?php echo $date;?></footer>
 </html>
