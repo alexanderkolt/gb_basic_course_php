@@ -1,17 +1,18 @@
-<?php 
+<?
 
-/* 1. Задание. Был установлен Visual Studio Code. 
-Установил Open office. БД MySQL.*/
+// 1. Задание.
+// Был установлен Visual Studio Code. 
+// Установил Open office. БД MySQL.
 
 
 //2. Задание.
 
-$name = "GeekBrains user";
+$name = "GeekBrains Alexander";
 echo "Hello, $name!";
 
 
 define('MY_CONST', 100);
-echo MY_CONST;
+echo MY_CONST . "<br>";
 
 
 $int10 = 42;
@@ -30,8 +31,8 @@ echo "$precise1 | $precise2 | $precise3";
 
 
 $a = 1;
-echo "$a";
-echo '$a';
+echo "$a <br>";
+echo '$a' . "<br>";
 
 
 $a = 10;
@@ -40,7 +41,7 @@ $b = (boolean)   $b;
 $a = 'Hello,';
 $b = 'world';
 $c = $a . $b;
-echo $c;
+echo "$c <br>";
 
 // 3.Задание
 
@@ -55,16 +56,5 @@ var_dump((float)123.0 === (int)123.0); // Почему false?
 var_dump((int)0 === (int)'hello, world'); // Почему true? 
 //Если строка содержит числа или ведущая числовая, тогда она будет преобразована в соответствующее целочисленное значение, в противном случае она преобразуется в ноль (0)
 ?>
-<?php
-//4. Задание
-$title = 'Title';
-$h1 = "<h1></h1>";
-$date = date('Y-m-d');
-?>
-<html>
-    <head>
-        <title><?php echo $title;?></title>
-        <?php echo $h1;?>
-    </head>
-    <footer><?php echo $date;?></footer>
-</html>
+<?
+//4. Задание в 4task.php
