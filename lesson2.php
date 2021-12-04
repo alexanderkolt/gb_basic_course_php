@@ -95,4 +95,14 @@ function mathOperation($a, $b, $operation){
 mathOperation($a, $b, "-");
 
 // 5. Посмотреть на встроенные функции PHP. Используя имеющийся HTML-шаблон, вывести текущий год в подвале при помощи встроенных функций PHP.
- echo date("d.m.Y");
+$title = 'Title';
+$h1 = "<h1></h1>";
+$date = date('Y-m-d');
+?>
+<html>
+    <head>
+        <title><?= $title;?></title>       
+    </head>
+    <?= $h1?>
+    <footer><?= $date;?></footer>
+</html>
