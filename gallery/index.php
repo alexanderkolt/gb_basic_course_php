@@ -1,5 +1,7 @@
 <?php
-include_once 'server.php'
+include_once 'server.php';
+$sql = "SELECT * FROM images";
+$table = mysqli_query($connect,$sql);
 ?>
 
 <!DOCTYPE html>
@@ -14,11 +16,10 @@ include_once 'server.php'
     <h2 style="text-align:center">Моя галерея.</h2>
 <div style="display:flex; flex-wrap:wrap; justify-content: space-evenly">
 <?php
-$files = scandir("small");
-// print_r($files);
-for($i=2; $i < count($files); $i++){?>
-    <a href="fullimage.php?img=<?= $files[$i]?>"><img width="calc( 100vw/ 3 )" height="calc( 100vw / 3 )" src="small/<?=$files[$i]?>" alt=""></a>
-<?php }
+
+while ($data = mysqli_fetch_assoc($table)): ?>
+    <a href="fullimage.php?img=<?= $data['images']?>"><img width="calc( 100vw/ 3 )" height="calc( 100vw / 3 )" src="small/<?= $data['images']?>" alt=""></a>
+<?php endwhile;
 ?>
 <form action="" method="post" enctype="multipart/form-data">
     <p>Загрузите файл</p>
