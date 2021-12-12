@@ -1,4 +1,11 @@
 <?php
+const SERVER ="localhost";
+const DB = "lesson5";
+const LOGIN ="root";
+const PASS = "root";
+
+$connect = mysqli_connect(SERVER,LOGIN,PASS,DB);
+
 // // print_r($_FILES);
 $path ="small/{$_FILES['photo']['name']}";
 // if(move_uploaded_file($_FILES['photo']['tmp_name'],$path)){
